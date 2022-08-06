@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --customBackground: url('./images/mountains-universe-1.png');
+}
+
+body {
+  font-family: 'Roboto';
+  background-color: black;
+  background-image: var(--customBackground);
+  height: 100vh;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+  color: white;
+}
+
+#app {
+  margin: 6rem 10rem;
+}
+
+nav {
+  font-size: 2.4rem;
+  display: flex;
+  gap: 3.2rem;
+  padding: 4rem 7.2rem;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.home nav a:hover,
+.universe nav a:hover,
+.explorer nav a:hover {
+  color: white;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 4.8rem;
+  line-height: 125%;
+}
+
+h2 {
+  text-align: center;
+  font-size: 3rem;
+  line-height: 125%;
+}
+
+p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 160%;
+
+  color: #e1e1e6;
+  margin-top: 1.6rem;
+  font-size: 1.8rem;
+  line-height: 160%;
+}
+
+button {
+  margin-top: 2.4rem;
+  padding: 1.2rem 3.2rem;
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  background: none;
+  color: white;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+button:hover {
+  background: white;
+  color: #02799d;
+}
+
+.home {
+  text-align: center;
+  --customBackground: url('./images/mountains-universe-1.png');
+  display: grid;
+  height: 100vh;
+  
+}
+
+.home nav a {
+  color: #9b9b9b;
+}
+
+.home nav a:nth-child(2) {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.universe {
+  --customBackground: url('./images/mountains-universe-2.png');
+}
+
+.universe nav a {
+  color: #9b9b9b;
+}
+
+.universe nav a:nth-child(3) {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.universe #app {
+  max-width: 65rem;
+}
+
+.explorer {
+  --customBackground: url('./images/mountains-universe-3.png');
+}
+
+.explorer #app {
+  max-width: 65rem;
+}
+
+.explorer nav a {
+  color: #9b9b9b;
+}
+
+.explorer nav a:nth-child(4) {
+  font-weight: bold;
+  color: #ffffff;
+}
