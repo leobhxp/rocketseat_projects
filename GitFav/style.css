@@ -1,0 +1,195 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --ff-primary: 'Roboto', sans-serif;
+  --text-color: #e1e1e6;
+  --hue: 192;
+
+  --secondary-color: hsla(194, 72%, 13%, 1);
+
+  --primary-color: hsla(var(--hue), 65%, 7%, 1);
+}
+
+body {
+  font-size: 2rem;
+  font-weight: 700;
+
+  line-height: 160%;
+  color: var(--text-color);
+  background-color: #2f2f33;
+}
+
+body * {
+  font-family: var(--ff-primary);
+}
+
+/* Screen reader only, é comum este conceito, é para esconder um item na tela, mas continuar visivel para a parte de acessibilidade */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  /* com o overflow nao aparece mais o elemento, pq apesar de ele ter o texto, nao cabe no 1px q foi definido */
+  overflow: hidden;
+  /* cria um retangulo sem tamnho, para forcar a caixa inexistente*/
+  clip: rect(0, 0, 0, 0);
+  /* nao quebra a linhja */
+  white-space: nowrap;
+  border-width: 0;
+}
+
+#app {
+  max-width: 1000px;
+  margin: 0 auto;
+
+  padding: 2rem;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin: 2.5rem 0;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.search input {
+  height: 4.8rem;
+  width: 46rem;
+  background: #06181c;
+  border-radius: 5px;
+  padding: 0 0.8rem;
+  border: none;
+  color: white;
+}
+
+.search button {
+  background-color: var(--primary-color);
+  height: 4.8rem;
+  border: none;
+  background: #065e7c;
+  border-radius: 5px;
+  padding: 0 3rem;
+  cursor: pointer;
+  text-transform: uppercase;
+
+  /* Neutral Colors/White */
+
+  color: #ffffff;
+  align-items: center;
+  text-align: center;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.search button:hover {
+  filter: brightness(1.1);
+}
+
+table {
+  margin-top: 8.7rem;
+  width: 100%;
+
+  /* para juntar as colunas da tabela */
+  border-collapse: collapse;
+  /* com o collapse nao funciona o border, e sem o overflow tbm incluencia*/
+
+  border: 1px solid #4a808c;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+table * {
+  font-size: 2rem;
+  color: var(--text-color);
+}
+
+table th {
+  background: var(--secondary-color);
+
+  text-align: left;
+  font-weight: 700;
+  padding: 1.6rem 4rem;
+}
+
+table th:first-child {
+  border-top-left-radius: 0.4rem;
+}
+
+table th:last-child {
+  border-top-right-radius: 0.4rem;
+}
+
+table tr:nth-child(odd) {
+  background-color: hsla(192, 65%, 7%, 1);
+}
+table tr:nth-child(even) {
+  background-color: rgba(6, 22, 27, 0.5);
+}
+
+table td {
+  padding: 1.6rem 4rem;
+  text-align: left;
+}
+
+.nocontent {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding: 20rem;
+  gap: 5rem;
+}
+
+.nocontent p {
+  font-family: 'Roboto Mono';
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 4rem;
+
+  color: #4e5455;
+}
+
+td.user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+td.user a {
+  text-decoration: none;
+}
+
+td.user a p {
+  font-weight: bold;
+}
+
+td.user img {
+  width: 5rem;
+  height: 5rem;
+
+  /* para garantir que fique daquele tamanho */
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+td .remove {
+  background: none;
+  border: none;
+
+  cursor: pointer;
+  color: #f75a68;
+}
